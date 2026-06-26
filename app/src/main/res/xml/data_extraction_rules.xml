@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="trekmesh_prefs" />
+        <exclude domain="sharedpref" path="trekmesh_node" />
+        <exclude domain="sharedpref" path="trekmesh_votes" />
+        <exclude domain="sharedpref" path="trekmesh_votes_mine" />
+        <exclude domain="sharedpref" path="trekmesh_service" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="trekmesh_prefs" />
+        <exclude domain="sharedpref" path="trekmesh_node" />
+    </device-transfer>
+</data-extraction-rules>

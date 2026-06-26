@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="trekmesh_prefs" />
+    <exclude domain="sharedpref" path="trekmesh_node" />
+    <exclude domain="sharedpref" path="trekmesh_votes" />
+    <exclude domain="sharedpref" path="trekmesh_votes_mine" />
+    <exclude domain="sharedpref" path="trekmesh_service" />
+</full-backup-content>

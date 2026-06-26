@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/compose_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Message type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MESSAGE TYPE"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#888888"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btn_type_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="INFO"
+                android:textSize="14sp"
+                android:backgroundTint="#2196F3" />
+
+            <Button
+                android:id="@+id/btn_type_sos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="SOS"
+                android:textSize="14sp"
+                android:backgroundTint="#F44336" />
+
+            <Button
+                android:id="@+id/btn_type_broadcast"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="ALERT"
+                android:textSize="14sp"
+                android:backgroundTint="#FF9800"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Priority -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRIORITY"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#888888"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_priority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/radio_priority_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1 – Low"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#4FC3F7"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radio_priority_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2 – Medium"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#4FC3F7" />
+
+            <RadioButton
+                android:id="@+id/radio_priority_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3 – High"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#4FC3F7" />
+
+        </RadioGroup>
+
+        <!-- Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MESSAGE *"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#888888"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Message text"
+            android:textColorHint="#555555"
+            android:textColor="#FFFFFF"
+            android:inputType="textMultiLine"
+            android:minLines="1"
+            android:maxLines="2"
+            android:background="#1EFFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION (optional)"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#888888"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Additional details..."
+            android:textColorHint="#555555"
+            android:textColor="#FFFFFF"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="8"
+            android:background="#1EFFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Photo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHOTO (optional)"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:textColor="#888888"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#1EFFFFFF"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <Button
+                android:id="@+id/btn_pick_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add photo"
+                android:backgroundTint="#444444" />
+
+            <Button
+                android:id="@+id/btn_remove_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Remove"
+                android:backgroundTint="#444444"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Send -->
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Send"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
